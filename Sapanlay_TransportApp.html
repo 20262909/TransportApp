@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glidr - Ride App</title>
+</head>
+<body id="top">
+
+  <header>
+    <h1>Glidr</h1>
+    <p><em>Smooth moves &bull; Fast routes</em></p>
+    <nav>
+      <a href="#book">Book a Ride</a> |
+      <a href="#fleet">Our Vehicles</a> |
+      <a href="#map">Map</a> |
+      <a href="#media">Media</a> |
+      <a href="#schedule">Schedule</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1: BOOKING FORM -->
+    <section id="book">
+      <h2>Book a Ride</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Trip Details</legend>
+          
+          <p>
+            <label for="fullname">Full name:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+          </p>
+
+          <p>
+            <label for="phone">Phone number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </p>
+
+          <p>
+            <label for="pickup">Pick-up location:</label><br>
+            <input type="text" id="pickup" name="pickup" list="places">
+          </p>
+
+          <p>
+            <label for="dropoff">Drop-off location:</label><br>
+            <input type="text" id="dropoff" name="dropoff" list="places">
+          </p>
+
+          <datalist id="places">
+            <option value="Don Bosco Bus Stop">
+            <option value="Baguio Cathedral">
+            <option value="SLU Gate 4">
+            <option value="Sandico Street">
+            <option value="Bonifacio Circle">
+          </datalist>
+
+          <p>
+            <label for="ride-date">Date:</label>
+            <input type="date" id="ride-date" name="ride-date" required>
+            <label for="ride-time">Time:</label>
+            <input type="time" id="ride-time" name="ride-time" required>
+          </p>
+
+          <p>
+            <label for="passengers">Passengers (1-10):</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+          </p>
+
+          <p>
+            <label for="vehicle-type">Vehicle type:</label>
+            <select id="vehicle-type" name="vehicle-type">
+              <option value="Taxi">Taxi</option>
+              <option value="Van">Van</option>
+              <option value="Shuttle Bus">Shuttle Bus</option>
+              <option value="Motorcycle Taxi">Motorcycle Taxi</option>
+              <option value="Tricycle">Tricycle</option>
+            </select>
+          </p>
+
+          <p>
+            Payment method:<br>
+            <input type="radio" id="pay-cash" name="payment" value="Cash" checked>
+            <label for="pay-cash">Cash</label>
+            <input type="radio" id="pay-card" name="payment" value="Card">
+            <label for="pay-card">Card</label>
+            <input type="radio" id="pay-wallet" name="payment" value="E-Wallet">
+            <label for="pay-wallet">E-Wallet</label>
+          </p>
+
+          <p>
+            Extras:<br>
+            <input type="checkbox" id="extra-luggage" name="extras" value="Extra luggage">
+            <label for="extra-luggage">Extra luggage</label><br>
+            <input type="checkbox" id="child-seat" name="extras" value="Child seat">
+            <label for="child-seat">Child seat</label><br>
+            <input type="checkbox" id="wheelchair" name="extras" value="Wheelchair accessible">
+            <label for="wheelchair">Wheelchair accessible</label>
+          </p>
+
+          <p>
+            <label for="notes">Notes for the driver:</label><br>
+            <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Landmarks, special instructions..."></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#terms-info">Terms &amp; Conditions</a></label>
+          </p>
+
+          <p>
+            <button type="submit">Book Now</button>
+            <button type="reset">Clear</button>
+          </p>
+        </fieldset>
+      </form>
+      <hr>
+    </section>
+
+    <!-- SECTION 2: OUR VEHICLES -->
+    <section id="fleet">
+      <h2>Our Vehicles</h2>
+      
+      <figure>
+        <img src="glidr_taxi.jpg" alt="A Glidr taxi" width="400" height="250">
+        <figcaption><strong>Taxi</strong> - Fast and comfortable for up to 4 passengers.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="glidr_van.jpg" alt="A Glidr van" width="400" height="250">
+        <figcaption><strong>Van</strong> - Ideal for families and groups of up to 10.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="glidr_bus.jpg" alt="A Glidr shuttle bus" width="400" height="250">
+        <figcaption><strong>Shuttle Bus</strong> - Affordable fixed-route transport.</figcaption>
+      </figure>
+
+      <hr>
+    </section>
+
+    <!-- SECTION 3: MAP AND ROUTE -->
+    <section id="map">
+      <h2>Find Our Stops</h2>
+      <p>Map of our main terminal:</p>
+
+      <p>
+        <a href="https://www.google.com/maps/search/trancoville/@16.431662,120.6084826,15z?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <img src="logo_google_maps.webp" height="30" alt="Trancoville Map">
+            Google Maps - Trancoville
+        </a>
+        </p>
+
+      <img src="image_maps_trancoville.png" alt="Trancoville Map">
+
+
+      
+      <hr>
+    </section>
+
+    <!-- SECTION 4: MEDIA -->
+    <section id="media">
+      <h2>Media</h2>
+
+      <h3>How Glidr Works (Video)</h3>
+      <video width="480" controls poster="poster_how_glidr_works.jpg">
+        <source src="video_how_to_book.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Driver Announcement (Audio)</h3>
+      <audio controls>
+        <source src="audio_how_to_book.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Watch on YouTube (Embedded)</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nIwszcnovqc" title="Glidr YouTube Video" allowfullscreen></iframe>
+      <hr>
+    </section>
+
+    <!-- SECTION 5: SCHEDULE -->
+    <section id="schedule">
+      <h2>Shuttle Schedule</h2>
+
+
+      <table border="1" cellpadding="6" cellspacing="0">
+         <caption>Daily departures from Central Terminal</caption>
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Fare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Don Bosco Bus Stop &rarr; Baguio Cathedral</td>
+            <td>6:00 AM</td>
+            <td>6:30 AM</td>
+            <td>&#8369;30</td>
+          </tr>
+          <tr>
+            <td>Don Bosco Bus Stop &rarr; SLU Gate 4</td>
+            <td>7:00 AM</td>
+            <td>7:40 AM</td>
+            <td>&#8369;45</td>
+          </tr>
+          <tr>
+            <td>Don Bosco Bus Stop &rarr; Sandico Street</td>
+            <td>9:00 AM</td>
+            <td>10:00 AM</td>
+            <td>&#8369;60</td>
+          </tr>
+          <tr>
+            <td>Don Bosco Bus Stop &rarr; Bonifacio Circle</td>
+            <td>1:00 PM</td>
+            <td>1:25 PM</td>
+            <td>&#8369;75</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Check Your Route</h3>
+      <form action="#" method="get">
+        <label for="route-select">Choose a route:</label>
+        <select id="route-select" name="route">
+          <option value="baguio-cathedral">Don Bosco Bus Stop &rarr; Baguio Cathedral</option>
+          <option value="slu-gate-4">Don Bosco Bus Stop &rarr; SLU Gate 4</option>
+          <option value="sandico-street">Don Bosco Bus Stop &rarr; Sandico Street</option>
+          <option value="bonifacio-circle">Don Bosco Bus Stop &rarr; Bonifacio Circle</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+      <hr>
+    </section>
+
+    <!-- SECTION 6: CONTACT & FEEDBACK -->
+    <section id="contact">
+      <h2>Contact &amp; Feedback</h2>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Send Feedback</legend>
+
+          <p>
+            <label for="feedback-name">Your name:</label><br>
+            <input type="text" id="feedback-name" name="feedback-name" required>
+          </p>
+
+          <p>
+            <label for="rating">Rate your ride (1-5):</label><br>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+          </p>
+
+          <p>
+            <label for="topic">Topic:</label>
+            <select id="topic" name="topic">
+              <option value="Compliment">Compliment</option>
+              <option value="Complaint">Complaint</option>
+              <option value="Lost item">Lost item</option>
+              <option value="Suggestion">Suggestion</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+          </p>
+
+          <p>
+            <label for="photo">Attach a photo (optional):</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*">
+          </p>
+
+          <p>
+            <button type="submit">Send Feedback</button>
+          </p>
+        </fieldset>
+      </form>
+
+      <h3>Reach Us</h3>
+      <address>
+        Glidr Ride App<br>
+        123 Trancoville, Baguio City, Benguet Philippines<br>
+        Phone: <a href="tel:+639485947240">+63 948 594 7240</a><br>
+        Email: <a href="20262909@s.ubaguio.edu">20262909@s.ubaguio.edu</a>
+      </address>
+      <hr>
+    </section>
+
+    <!-- SECTION 7: USEFUL LINKS -->
+    <section id="links">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="https://www.openstreetmap.org" target="_blank" href="https://www.openstreetmap.org/search?query=trancoville&zoom=6&minlon=111.07177734375001&minlat=3.6669277409287235&maxlon=132.47314453125003&maxlat=22.04491330024569#map=16/16.42429/120.59838">OpenStreetMap</a></li>
+        <li><a href="https://maps.google.com" target="_blank" href="https://www.google.com/maps/place/Trancoville,+Baguio,+Benguet/@16.431662,120.6084826,15z/data=!4m6!3m5!1s0x3391a3e04f6a9b8d:0x67b25d1898d7148f!8m2!3d16.4246173!4d120.5991335!16s%2Fg%2F11fyx9sk33?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D">Google Maps</a></li>
+        <li><a href="https://facebook.com" target="_blank" href="https://www.facebook.com/share/1FPYsoHwJu">Our Facebook Page</a></li>
+    
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </section>
+
+    <!-- SECTION 8: TERMS & CONDITIONS -->
+    <section id="terms-info">
+      <h2>Terms &amp; Conditions</h2>
+      <details>
+        <summary>Read the terms</summary>
+        <ol>
+          <li>Passengers must be present at the pick-up location 5 minutes prior to departure.</li>
+          <li>No smoking or eating inside the vehicles.</li>
+          <li>Luggage exceeding standard dimensions may incur additional charges.</li>
+        </ol>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; 2026 Glidr Ride App by Maria Sapanlay. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
